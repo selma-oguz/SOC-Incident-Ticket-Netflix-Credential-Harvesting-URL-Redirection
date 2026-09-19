@@ -1,5 +1,5 @@
-
 <img width="487" height="480" alt="Ekran görüntüsü 2026-09-19 094107" src="https://github.com/user-attachments/assets/e8341058-7162-425b-9e8c-09d9aa015c0d" />
+
 # SOC Incident Ticket: Netflix Credential Harvesting & URL Redirection
 
 **Ticket ID:** INC-PHISH-003
