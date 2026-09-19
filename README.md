@@ -22,8 +22,8 @@ On July 7, 2021, an internal user (`REDACTED_USER@yahoo.com`) received a highly 
 **Impact Assessment:** 
 No user interaction (clicks) occurred. The incident is contained.
 
-### A) Email Artifacts (Observables)
-=================================
+A) Email Artifacts (Observables)
+
 * **Sending Address:** `N𝅹e𝅴t𝅴f𝅷I𝅶i𝅶x𝅶 <JGQ47wazXe1xYVBrkeDg-JOg7ODDQwWdR[@]JOg7ODDQwWdR-yVkCaBkTNp[.]gogolecloud[.]com>`
 * **Subject Line:** `Y⁪o𝅸u⁮r⁫ N⁫e⁫t⁫f⁫I⁫i⁫x A⁫c⁫c⁫o⁫u⁫n⁫t⁫ i⁫s⁫ o⁫n⁫ H⁫o⁫l⁫d⁫`
 * **Recipients:** `[REDACTED_USER]@yahoo.com`
@@ -33,8 +33,8 @@ No user interaction (clicks) occurred. The incident is contained.
 * **Date and Time:** Wed, 7 Jul 2021 04:14:40 +0200
 * **Message ID:** `<60e50e16.1c69fb81.186da.9717SMTPIN_ADDED_MISSING@mx.google.com>`
 
-### B) Web Artifacts (Observables)
-==============================
+B) Web Artifacts (Observables)
+
 * **Full URL Links (Defang-sanitized):** 
   * `hxxps[://]t[.]co/yuxfZm8KPg?amp=1` (Initial Redirect)
   * `hxxps[://]www[.]linkedin[.]com/slink?code=enmd-V3` (Secondary Redirect)
@@ -44,21 +44,21 @@ No user interaction (clicks) occurred. The incident is contained.
   * `prioritysurveyors[.]com`
   * `JOg7ODDQwWdR-yVkCaBkTNp[.]gogolecloud[.]com`
 
-### C) File (Attachment) Artifacts
-=============================================
+C) File (Attachment) Artifacts
+
 * **File Name:** N/A
 * **File Hash (SHA256):** N/A
 
 
-## SECTION 2: Artifact Analysis
-##############################
+SECTION 2: Artifact Analysis
+
 * **URL Redirection Analysis (VirusTotal & ANY.RUN):** Analysis confirms that the legitimate LinkedIn shortlink (`linkedin.com/slink?code=enmd-V3`) acts as a proxy, hiding the final malicious destination. This technique exploits the high reputation of domains like Twitter and LinkedIn to bypass corporate web proxies.
 * **Final Payload Domain:** `prioritysurveyors.com` appears to be a legitimate but compromised website. The attacker has uploaded a malicious PHP script (`restore.php`) deep within a legitimate plugin directory (`/plugins/jquery-file-upload/`), utilizing it to host the fake Netflix login portal.
 * **IP Reputation (AbuseIPDB):** The sending IP `209.85.167.226` has been flagged for spam activity, despite belonging to the broader Google network. 
 
 
-## SECTION 3: Suggested Defensive Measures
-#######################################
+SECTION 3: Suggested Defensive Measures
+
 
 * **Declaration:** **True Positive – No Impact (Non-Issue)**
 
